@@ -10,7 +10,7 @@ class X is Exception {
 
 
 has $.api-url = "https://api.paste.ee/v1/";
-has Str $.token is required("You must provide you api token");
+has Str $.token ;
 
 method pastes(Int :$page = 1 ,Int :$perpage = 25) {
     my $res = jget $!api-url ~ 'pastes', :X-Auth-Token($!token);
@@ -42,4 +42,10 @@ method delete(Str $id) {
 
 method fetch(Str $id) {
     self.paste($id);
+}
+
+method info() {
+    my $res = jget $!api-url ~ "users/info", :X-Auth-Token($!token)
+            orelse die X.new: :message(.exception.message);
+    return $res;
 }
