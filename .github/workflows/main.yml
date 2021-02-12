@@ -9,4 +9,4 @@ jobs:
         uses: actions/checkout@v2
       - name: Runs tests
         id: tests
-        uses: JJ/raku-container-action@ master
+        uses: JJ/raku-container-action@master
