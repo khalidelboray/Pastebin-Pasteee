@@ -1,0 +1,28 @@
+{
+  "name": "Pastebin::Pasteee",
+  "description": "use paste.ee API via Raku",
+  "version": "0.1",
+  "perl": "6.*",
+  "authors": [
+    "Khalid Elboray"
+  ],
+  "auth": "github:khalidelboray",
+  "depends": [
+    "WWW",
+    "JSON::Class"
+  ],
+  "build-depends": [],
+  "test-depends": [],
+  "provides": {
+    "Pastebin::Pasteee": "lib/Pastebin/Pasteee.pm6",
+    "Pastebin::Pasteee::Paste": "lib/Pastebin/Pasteee/Paste.pm6",
+    "Pastebin::Pasteee::Paste::Section": "lib/Pastebin/Pasteee/Paste/Section.pm6"
+  },
+  "resources": [],
+  "license": "Artistic-2.0",
+  "tags": [
+    "pastebin",
+    "paste.ee"
+  ],
+  "source-url": "Write me!"
+}

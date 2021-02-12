@@ -1,0 +1,10 @@
+use JSON::Class;
+use Pastebin::Pasteee::Paste::Section;
+unit class Pastebin::Pasteee::Paste does JSON::Class;
+has Str $.id;
+has Bool $.encrypted is default(False);
+has Str $.description is default('');
+has Int $.views;
+has Str $.created_at;
+has Str $.expires_at;
+has Section @.sections;
